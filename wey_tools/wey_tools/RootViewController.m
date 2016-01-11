@@ -10,6 +10,7 @@
 #import "LoopViewController.h"
 #import "ViewController.h"
 #import "CellHeighTableViewController.h"
+#import "MD5ViewController.h"
 @interface RootViewController ()
 @property (nonatomic, strong) NSArray *items;
 @end
@@ -18,8 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        self.title = @"MyTools";
-    _items = @[@"loopIMG",@"runtime",@"缓存高度"];
+    self.title = @"MyTools";
+    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
@@ -32,7 +33,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    
     return _items.count;
 }
 
@@ -44,7 +45,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     switch (indexPath.row) {
         case 0:
             [self.navigationController showViewController:[[LoopViewController alloc]init] sender:nil];
@@ -55,7 +56,9 @@
         case 2:
             [self.navigationController showViewController:[[CellHeighTableViewController alloc]init] sender:nil];
             break;
-    
+        case 3:
+            [self.navigationController showViewController:[[MD5ViewController alloc]init] sender:nil];
+            break;
             
             
         default:
