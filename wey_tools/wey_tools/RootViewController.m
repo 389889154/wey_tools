@@ -11,6 +11,7 @@
 #import "ViewController.h"
 #import "CellHeighTableViewController.h"
 #import "MD5ViewController.h"
+#import "HudTableViewController.h"
 @interface RootViewController ()
 @property (nonatomic, strong) NSArray *items;
 @end
@@ -20,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"MyTools";
-    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5"];
+    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5",@"HUD"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
@@ -58,6 +59,9 @@
             break;
         case 3:
             [self.navigationController showViewController:[[MD5ViewController alloc]init] sender:nil];
+            break;
+        case 4:
+            [self.navigationController showViewController:[[HudTableViewController alloc]init] sender:nil];
             break;
             
             

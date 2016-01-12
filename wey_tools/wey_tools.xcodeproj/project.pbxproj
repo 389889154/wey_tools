@@ -54,6 +54,10 @@
 		F66219C31C43FF4800009FE9 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F66219C21C43FF4800009FE9 /* NSDate+Extension.m */; };
 		F66219C61C43FF7D00009FE9 /* NSString +Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F66219C51C43FF7D00009FE9 /* NSString +Extension.m */; };
 		F66219C91C43FFF400009FE9 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F66219C81C43FFF400009FE9 /* UIBarButtonItem+Extension.m */; };
+		F6B52DB11C4495B900C5AF0D /* HdMsgBox.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B52DB01C4495B900C5AF0D /* HdMsgBox.m */; };
+		F6B52DB41C4495C400C5AF0D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B52DB31C4495C400C5AF0D /* MBProgressHUD.m */; };
+		F6B52DB81C44968400C5AF0D /* HudTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B52DB71C44968400C5AF0D /* HudTableViewController.m */; };
+		F6B52DBC1C44AA4200C5AF0D /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B52DBB1C44AA4200C5AF0D /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +144,15 @@
 		F66219C51C43FF7D00009FE9 /* NSString +Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString +Extension.m"; sourceTree = "<group>"; };
 		F66219C71C43FFF400009FE9 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		F66219C81C43FFF400009FE9 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		F6B52DAF1C4495B900C5AF0D /* HdMsgBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HdMsgBox.h; sourceTree = "<group>"; };
+		F6B52DB01C4495B900C5AF0D /* HdMsgBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HdMsgBox.m; sourceTree = "<group>"; };
+		F6B52DB21C4495C400C5AF0D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		F6B52DB31C4495C400C5AF0D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		F6B52DB61C44968400C5AF0D /* HudTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudTableViewController.h; sourceTree = "<group>"; };
+		F6B52DB71C44968400C5AF0D /* HudTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudTableViewController.m; sourceTree = "<group>"; };
+		F6B52DB91C44AA1600C5AF0D /* DefineConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineConstant.h; sourceTree = "<group>"; };
+		F6B52DBA1C44AA4200C5AF0D /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		F6B52DBB1C44AA4200C5AF0D /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,10 +185,11 @@
 		F66219271C43BDAB00009FE9 /* wey_tools */ = {
 			isa = PBXGroup;
 			children = (
+				F662193F1C43BE8100009FE9 /* Classes */,
+				F6B52DA21C44919E00C5AF0D /* Utils */,
 				F66219BD1C43FEAD00009FE9 /* Category */,
 				F66219BC1C43FEA300009FE9 /* Marcos */,
 				F66219651C43F6DC00009FE9 /* Vendors */,
-				F662193F1C43BE8100009FE9 /* Classes */,
 				F66219281C43BDAB00009FE9 /* Supporting Files */,
 			);
 			path = wey_tools;
@@ -199,6 +213,7 @@
 				F662192C1C43BDAC00009FE9 /* AppDelegate.m */,
 				F662194F1C43DF8A00009FE9 /* RootViewController.h */,
 				F66219501C43DF8A00009FE9 /* RootViewController.m */,
+				F6B52DB51C44967300C5AF0D /* HUD */,
 				F66219981C43F7A900009FE9 /* MD5 */,
 				F66219551C43E1A800009FE9 /* CellHeight */,
 				F662194C1C43CBE600009FE9 /* LoopIMG */,
@@ -257,6 +272,7 @@
 		F66219651C43F6DC00009FE9 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				F6B52DAE1C44959F00C5AF0D /* hud */,
 				F66219A41C43FCCE00009FE9 /* Reachability.h */,
 				F66219A51C43FCCE00009FE9 /* Reachability.m */,
 				F66219661C43F6FD00009FE9 /* SDWebImage */,
@@ -335,6 +351,9 @@
 		F66219BC1C43FEA300009FE9 /* Marcos */ = {
 			isa = PBXGroup;
 			children = (
+				F6B52DB91C44AA1600C5AF0D /* DefineConstant.h */,
+				F6B52DBA1C44AA4200C5AF0D /* TestViewController.h */,
+				F6B52DBB1C44AA4200C5AF0D /* TestViewController.m */,
 			);
 			name = Marcos;
 			sourceTree = "<group>";
@@ -352,6 +371,33 @@
 				F66219BF1C43FEEE00009FE9 /* UIView+Frame.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		F6B52DA21C44919E00C5AF0D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		F6B52DAE1C44959F00C5AF0D /* hud */ = {
+			isa = PBXGroup;
+			children = (
+				F6B52DB21C4495C400C5AF0D /* MBProgressHUD.h */,
+				F6B52DB31C4495C400C5AF0D /* MBProgressHUD.m */,
+				F6B52DAF1C4495B900C5AF0D /* HdMsgBox.h */,
+				F6B52DB01C4495B900C5AF0D /* HdMsgBox.m */,
+			);
+			name = hud;
+			sourceTree = "<group>";
+		};
+		F6B52DB51C44967300C5AF0D /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				F6B52DB61C44968400C5AF0D /* HudTableViewController.h */,
+				F6B52DB71C44968400C5AF0D /* HudTableViewController.m */,
+			);
+			name = HUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B52DB81C44968400C5AF0D /* HudTableViewController.m in Sources */,
 				F662199E1C43F7E200009FE9 /* NSString+md5Sting.m in Sources */,
 				F66219C01C43FEEE00009FE9 /* UIView+Frame.m in Sources */,
 				F66219C61C43FF7D00009FE9 /* NSString +Extension.m in Sources */,
@@ -453,6 +500,7 @@
 				F66219941C43F6FD00009FE9 /* UIImage+WebP.m in Sources */,
 				F662198E1C43F6FD00009FE9 /* SDWebImageDownloaderOperation.m in Sources */,
 				F66219971C43F6FD00009FE9 /* UIView+WebCacheOperation.m in Sources */,
+				F6B52DB11C4495B900C5AF0D /* HdMsgBox.m in Sources */,
 				F662198D1C43F6FD00009FE9 /* SDWebImageDownloader.m in Sources */,
 				F66219921C43F6FD00009FE9 /* UIImage+GIF.m in Sources */,
 				F66219C31C43FF4800009FE9 /* NSDate+Extension.m in Sources */,
@@ -462,8 +510,10 @@
 				F66219951C43F6FD00009FE9 /* UIImageView+HighlightedWebCache.m in Sources */,
 				F662199B1C43F7BF00009FE9 /* MD5ViewController.m in Sources */,
 				F662192A1C43BDAB00009FE9 /* main.m in Sources */,
+				F6B52DBC1C44AA4200C5AF0D /* TestViewController.m in Sources */,
 				F66219C91C43FFF400009FE9 /* UIBarButtonItem+Extension.m in Sources */,
 				F66219A31C43FBC500009FE9 /* HeightModel.m in Sources */,
+				F6B52DB41C4495C400C5AF0D /* MBProgressHUD.m in Sources */,
 				F662198A1C43F6FD00009FE9 /* SDImageCache.m in Sources */,
 				F66219911C43F6FD00009FE9 /* UIButton+WebCache.m in Sources */,
 				F66219891C43F6FD00009FE9 /* NSData+ImageContentType.m in Sources */,
