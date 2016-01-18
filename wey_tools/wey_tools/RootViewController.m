@@ -7,13 +7,15 @@
 //
 
 #import "RootViewController.h"
-#import "LoopViewController.h"
+#import "CycleViewController.h"
 #import "ViewController.h"
 #import "CellHeighTableViewController.h"
 #import "MD5ViewController.h"
 #import "HudTableViewController.h"
+#import "FmdbDemoViewController.h"
 @interface RootViewController ()
 @property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) NSArray *classes;
 @end
 
 @implementation RootViewController
@@ -21,7 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"MyTools";
-    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5",@"HUD"];
+    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5",@"HUD",@"FMDBDemo"];
+    _classes = @[[CycleViewController class],
+                 [ViewController class],
+                 [CellHeighTableViewController class],
+                 [MD5ViewController class],
+                 [HudTableViewController class],
+                 [FmdbDemoViewController class]
+                 ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
@@ -47,29 +56,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.row) {
-        case 0:
-            [self.navigationController showViewController:[[LoopViewController alloc]init] sender:nil];
-            break;
-        case 1:
-            [self.navigationController showViewController:[[ViewController alloc]init] sender:nil];
-            break;
-        case 2:
-            [self.navigationController showViewController:[[CellHeighTableViewController alloc]init] sender:nil];
-            break;
-        case 3:
-            [self.navigationController showViewController:[[MD5ViewController alloc]init] sender:nil];
-            break;
-        case 4:
-            [self.navigationController showViewController:[[HudTableViewController alloc]init] sender:nil];
-            break;
-            
-            
-        default:
-            break;
-    }
+    
+    UIViewController *vc = [[_classes[indexPath.row] alloc]init];
+    vc.view.backgroundColor = [UIColor whiteColor];
+    vc.title  =_items[indexPath.row];
+    [self.navigationController showViewController:vc sender:nil];
+    
 }
-
-
 
 @end

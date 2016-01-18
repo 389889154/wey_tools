@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     UINavigationController *nvc = [[UINavigationController alloc]initWithRootViewController:[[RootViewController alloc]init]];
+    self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = nvc;
     
     return YES;
