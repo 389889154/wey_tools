@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F64903321C50D7590064E5D3 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F64903311C50D7590064E5D3 /* PageViewController.m */; };
+		F64903341C50D8CF0064E5D3 /* node.txt in Resources */ = {isa = PBXBuildFile; fileRef = F64903331C50D8CF0064E5D3 /* node.txt */; };
+		F6521FE01C50ADB80024D534 /* AttributeTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6521FDF1C50ADB80024D534 /* AttributeTextVC.m */; };
+		F6521FE31C50BA960024D534 /* UIView+point.m in Sources */ = {isa = PBXBuildFile; fileRef = F6521FE21C50BA960024D534 /* UIView+point.m */; };
 		F662192A1C43BDAB00009FE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F66219291C43BDAB00009FE9 /* main.m */; };
 		F662192D1C43BDAC00009FE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F662192C1C43BDAC00009FE9 /* AppDelegate.m */; };
 		F66219301C43BDAC00009FE9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F662192F1C43BDAC00009FE9 /* ViewController.m */; };
@@ -72,6 +76,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F64903301C50D7590064E5D3 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		F64903311C50D7590064E5D3 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		F64903331C50D8CF0064E5D3 /* node.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = node.txt; sourceTree = "<group>"; };
+		F6521FDE1C50ADB80024D534 /* AttributeTextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeTextVC.h; sourceTree = "<group>"; };
+		F6521FDF1C50ADB80024D534 /* AttributeTextVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeTextVC.m; sourceTree = "<group>"; };
+		F6521FE11C50BA960024D534 /* UIView+point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+point.h"; sourceTree = "<group>"; };
+		F6521FE21C50BA960024D534 /* UIView+point.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+point.m"; sourceTree = "<group>"; };
 		F66219251C43BDAB00009FE9 /* wey_tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wey_tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66219291C43BDAB00009FE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F662192B1C43BDAB00009FE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -200,6 +211,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6521FDD1C50ACBF0024D534 /* AttributeText */ = {
+			isa = PBXGroup;
+			children = (
+				F6521FDE1C50ADB80024D534 /* AttributeTextVC.h */,
+				F6521FDF1C50ADB80024D534 /* AttributeTextVC.m */,
+				F6521FE11C50BA960024D534 /* UIView+point.h */,
+				F6521FE21C50BA960024D534 /* UIView+point.m */,
+				F64903301C50D7590064E5D3 /* PageViewController.h */,
+				F64903311C50D7590064E5D3 /* PageViewController.m */,
+				F64903331C50D8CF0064E5D3 /* node.txt */,
+			);
+			name = AttributeText;
+			sourceTree = "<group>";
+		};
 		F662191C1C43BDAB00009FE9 = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +270,7 @@
 		F662193F1C43BE8100009FE9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F6521FDD1C50ACBF0024D534 /* AttributeText */,
 				F6C9CE7D1C4A2E4C00108B13 /* FMDBDemo */,
 				F68180F01C474184005BAC1B /* msg/phone */,
 				F662192B1C43BDAB00009FE9 /* AppDelegate.h */,
@@ -565,6 +591,7 @@
 				F66219B51C43FD0100009FE9 /* 05.jpg in Resources */,
 				F66219B31C43FD0100009FE9 /* 03.jpg in Resources */,
 				F662194E1C43D02100009FE9 /* icon.xcassets in Resources */,
+				F64903341C50D8CF0064E5D3 /* node.txt in Resources */,
 				F66219B11C43FD0100009FE9 /* 01.jpg in Resources */,
 				F66219B21C43FD0100009FE9 /* 02.jpg in Resources */,
 				F66219B41C43FD0100009FE9 /* 04.jpg in Resources */,
@@ -589,6 +616,7 @@
 				F68180EF1C47403A005BAC1B /* CycleViewController.m in Sources */,
 				F66219C01C43FEEE00009FE9 /* UIView+Frame.m in Sources */,
 				F66219C61C43FF7D00009FE9 /* NSString +Extension.m in Sources */,
+				F6521FE01C50ADB80024D534 /* AttributeTextVC.m in Sources */,
 				F66219881C43F6FD00009FE9 /* MKAnnotationView+WebCache.m in Sources */,
 				F68180F71C475417005BAC1B /* CycleScrollView.m in Sources */,
 				F662194B1C43C75F00009FE9 /* Person.m in Sources */,
@@ -616,6 +644,7 @@
 				F66219C31C43FF4800009FE9 /* NSDate+Extension.m in Sources */,
 				F662192D1C43BDAC00009FE9 /* AppDelegate.m in Sources */,
 				F66219471C43C0E300009FE9 /* NSObject+AutoEncode.m in Sources */,
+				F6521FE31C50BA960024D534 /* UIView+point.m in Sources */,
 				F6796FEE1C4BE03A00E35E05 /* User.m in Sources */,
 				F6C9CE901C4A2E7A00108B13 /* FMResultSet.m in Sources */,
 				F66219581C43E1CD00009FE9 /* CellHeighTableViewController.m in Sources */,
@@ -623,6 +652,7 @@
 				F6D118951C4A361D0048D76F /* DataHelper.m in Sources */,
 				F662199B1C43F7BF00009FE9 /* MD5ViewController.m in Sources */,
 				F662192A1C43BDAB00009FE9 /* main.m in Sources */,
+				F64903321C50D7590064E5D3 /* PageViewController.m in Sources */,
 				F6B52DBC1C44AA4200C5AF0D /* TestViewController.m in Sources */,
 				F66219C91C43FFF400009FE9 /* UIBarButtonItem+Extension.m in Sources */,
 				F66219A31C43FBC500009FE9 /* HeightModel.m in Sources */,

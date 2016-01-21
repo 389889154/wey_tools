@@ -13,6 +13,7 @@
 #import "MD5ViewController.h"
 #import "HudTableViewController.h"
 #import "FmdbDemoViewController.h"
+#import "AttributeTextVC.h"
 @interface RootViewController ()
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) NSArray *classes;
@@ -23,15 +24,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"MyTools";
-    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5",@"HUD",@"FMDBDemo"];
+    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5",@"HUD",@"FMDBDemo",@"富文本",@"电话/跳网页/短信/相机等"];
     _classes = @[[CycleViewController class],
                  [ViewController class],
                  [CellHeighTableViewController class],
                  [MD5ViewController class],
                  [HudTableViewController class],
-                 [FmdbDemoViewController class]
+                 [FmdbDemoViewController class],
+                 [AttributeTextVC class]
                  ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
