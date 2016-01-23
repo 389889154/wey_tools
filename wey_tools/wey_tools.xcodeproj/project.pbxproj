@@ -55,6 +55,7 @@
 		F66219C31C43FF4800009FE9 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F66219C21C43FF4800009FE9 /* NSDate+Extension.m */; };
 		F66219C61C43FF7D00009FE9 /* NSString +Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F66219C51C43FF7D00009FE9 /* NSString +Extension.m */; };
 		F66219C91C43FFF400009FE9 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F66219C81C43FFF400009FE9 /* UIBarButtonItem+Extension.m */; };
+		F665B6D91C536A2B008E48DF /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F665B6D81C536A2B008E48DF /* MasonryViewController.m */; };
 		F6796FEE1C4BE03A00E35E05 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F6796FED1C4BE03A00E35E05 /* User.m */; };
 		F68180EF1C47403A005BAC1B /* CycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68180EE1C47403A005BAC1B /* CycleViewController.m */; };
 		F68180F21C474FBE005BAC1B /* placeHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = F68180F11C474FBE005BAC1B /* placeHolder.png */; };
@@ -161,6 +162,8 @@
 		F66219C51C43FF7D00009FE9 /* NSString +Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString +Extension.m"; sourceTree = "<group>"; };
 		F66219C71C43FFF400009FE9 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		F66219C81C43FFF400009FE9 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		F665B6D71C536A2B008E48DF /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
+		F665B6D81C536A2B008E48DF /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
 		F6796FEC1C4BE03900E35E05 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		F6796FED1C4BE03A00E35E05 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		F68180ED1C47403A005BAC1B /* CycleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleViewController.h; sourceTree = "<group>"; };
@@ -270,6 +273,7 @@
 		F662193F1C43BE8100009FE9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F665B6D61C536A05008E48DF /* Masonry */,
 				F6521FDD1C50ACBF0024D534 /* AttributeText */,
 				F6C9CE7D1C4A2E4C00108B13 /* FMDBDemo */,
 				F68180F01C474184005BAC1B /* msg/phone */,
@@ -434,6 +438,15 @@
 				F66219BF1C43FEEE00009FE9 /* UIView+Frame.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		F665B6D61C536A05008E48DF /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				F665B6D71C536A2B008E48DF /* MasonryViewController.h */,
+				F665B6D81C536A2B008E48DF /* MasonryViewController.m */,
+			);
+			name = Masonry;
 			sourceTree = "<group>";
 		};
 		F68180E51C472E7F005BAC1B /* CycleView */ = {
@@ -653,6 +666,7 @@
 				F662199B1C43F7BF00009FE9 /* MD5ViewController.m in Sources */,
 				F662192A1C43BDAB00009FE9 /* main.m in Sources */,
 				F64903321C50D7590064E5D3 /* PageViewController.m in Sources */,
+				F665B6D91C536A2B008E48DF /* MasonryViewController.m in Sources */,
 				F6B52DBC1C44AA4200C5AF0D /* TestViewController.m in Sources */,
 				F66219C91C43FFF400009FE9 /* UIBarButtonItem+Extension.m in Sources */,
 				F66219A31C43FBC500009FE9 /* HeightModel.m in Sources */,
