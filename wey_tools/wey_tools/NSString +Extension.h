@@ -32,4 +32,7 @@
 - (BOOL)isPhoneNumber;
 - (BOOL)isIPAddress;
 
+/** 拼音 */
+- (NSString *) pinYin;
+
 @end

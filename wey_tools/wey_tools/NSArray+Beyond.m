@@ -7,7 +7,8 @@
 //
 
 #import "NSArray+Beyond.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
+#import <objc/message.h>
 @implementation NSArray (Beyond)
 
 +(void)load {

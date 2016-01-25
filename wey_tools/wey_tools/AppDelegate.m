@@ -8,11 +8,20 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "UIColor+Util.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+#pragma mark --- 测试账号
+//if (![[NSUserDefaults standardUserDefaults] boolForKey:@"init"]) {
+//    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"init"];
+//    user *model = [[user alloc]init];
+//    model.userName = @"admin123";
+//    model.password = @"admin123";
+//    [[DateHelper shareInstance] addUser:model];
+//}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -20,6 +29,23 @@
     UINavigationController *nvc = [[UINavigationController alloc]initWithRootViewController:[[RootViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = nvc;
+    
+    self.isNightModel = [[NSUserDefaults standardUserDefaults] boolForKey:@"isNightMode"];
+    NSLog(@"%d",self.isNightModel);
+    
+    /************ 控件外观设置 **************/
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    NSDictionary *navbarTitleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    [[UITabBar appearance] setTintColor:[UIColor colorWithHex:0x15A230]];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHex:0x15A230]} forState:UIControlStateSelected];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor navigationbarColor]];
+    [[UITabBar appearance] setBarTintColor:[UIColor titleBarColor]];
     
     return YES;
 }

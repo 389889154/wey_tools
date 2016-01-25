@@ -7,7 +7,8 @@
 //
 
 #import "NSObject+AutoEncode.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
+#import <objc/message.h>
 @implementation NSObject (AutoEncode)
 
 // 反归档
