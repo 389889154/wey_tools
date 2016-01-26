@@ -102,6 +102,9 @@
 		F6C9CE931C4A2ED500108B13 /* FmdbDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C9CE921C4A2ED500108B13 /* FmdbDemoViewController.m */; };
 		F6C9CE951C4A2F5500108B13 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C9CE941C4A2F5500108B13 /* libsqlite3.tbd */; };
 		F6C9CE981C4A30E900108B13 /* AddTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C9CE971C4A30E900108B13 /* AddTableViewController.m */; };
+		F6CD08421C579A01002559D8 /* default－portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CD083F1C579A01002559D8 /* default－portrait.png */; };
+		F6CD08431C579A01002559D8 /* default－portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CD08401C579A01002559D8 /* default－portrait@2x.png */; };
+		F6CD08441C579A01002559D8 /* default－portrait@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CD08411C579A01002559D8 /* default－portrait@3x.png */; };
 		F6D118951C4A361D0048D76F /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D118941C4A361D0048D76F /* DataHelper.m */; };
 /* End PBXBuildFile section */
 
@@ -279,6 +282,9 @@
 		F6C9CE941C4A2F5500108B13 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F6C9CE961C4A30E900108B13 /* AddTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTableViewController.h; sourceTree = "<group>"; };
 		F6C9CE971C4A30E900108B13 /* AddTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTableViewController.m; sourceTree = "<group>"; };
+		F6CD083F1C579A01002559D8 /* default－portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default－portrait.png"; sourceTree = "<group>"; };
+		F6CD08401C579A01002559D8 /* default－portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default－portrait@2x.png"; sourceTree = "<group>"; };
+		F6CD08411C579A01002559D8 /* default－portrait@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default－portrait@3x.png"; sourceTree = "<group>"; };
 		F6CEAA801C5515B100EDE24F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F6D118931C4A361D0048D76F /* DataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHelper.h; sourceTree = "<group>"; };
 		F6D118941C4A361D0048D76F /* DataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHelper.m; sourceTree = "<group>"; };
@@ -590,6 +596,9 @@
 		F67D111B1C56599F00DC9C8A /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				F6CD083F1C579A01002559D8 /* default－portrait.png */,
+				F6CD08401C579A01002559D8 /* default－portrait@2x.png */,
+				F6CD08411C579A01002559D8 /* default－portrait@3x.png */,
 				F67D11341C56699100DC9C8A /* tabbar-more@2x.png */,
 				F67D11351C56699100DC9C8A /* tabbar-more@3x.png */,
 				F67D11301C56662D00DC9C8A /* tabbar-me-selected@2x.png */,
@@ -779,12 +788,15 @@
 				F67D11371C56699100DC9C8A /* tabbar-more@3x.png in Resources */,
 				F67D11321C56662D00DC9C8A /* tabbar-me-selected@2x.png in Resources */,
 				F67D112E1C56662700DC9C8A /* tabbar-me@2x.png in Resources */,
+				F6CD08431C579A01002559D8 /* default－portrait@2x.png in Resources */,
 				F67D112F1C56662700DC9C8A /* tabbar-me@3x.png in Resources */,
+				F6CD08441C579A01002559D8 /* default－portrait@3x.png in Resources */,
 				F66219B91C43FD0100009FE9 /* 09.jpg in Resources */,
 				F66219B61C43FD0100009FE9 /* 06.jpg in Resources */,
 				F67D11271C5665D100DC9C8A /* user-background@3x.png in Resources */,
 				F68180F21C474FBE005BAC1B /* placeHolder.png in Resources */,
 				F67D11261C5665D100DC9C8A /* user-background-dark@3x.png in Resources */,
+				F6CD08421C579A01002559D8 /* default－portrait.png in Resources */,
 				F66219A01C43F8EA00009FE9 /* MD5.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
