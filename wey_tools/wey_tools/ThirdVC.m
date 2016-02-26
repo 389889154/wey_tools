@@ -52,7 +52,8 @@
     
     [self.view addSubview:self.tabelView];
     self.tabelView.tableHeaderView = self.headerView;
-    
+    [UIImage imageNamed:@""];
+    [[UIImage alloc]initWithContentsOfFile:@""];
     _iconView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"default－portrait"]];
     [_headerView addSubview:_iconView];
     [_iconView makeConstraints:^(MASConstraintMaker *make) {

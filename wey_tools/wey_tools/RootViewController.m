@@ -17,6 +17,7 @@
 #import "MasonryViewController.h"
 #import "MsgViewController.h"
 #import "TabBarViewController.h"
+#import "MoreViewController.h"
 @interface RootViewController ()
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) NSArray *classes;
@@ -27,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"MyTools";
-    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5",@"HUD",@"FMDBDemo",@"富文本",@"电话/跳网页/短信/相机等",@"Masonry",@"nav,tab,个人"];
+    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5",@"HUD",@"FMDBDemo",@"富文本",@"电话/跳网页/短信/相机等",@"Masonry",@"nav,tab,个人",@"tableView 展开"];
     _classes = @[[CycleViewController class],
                  [ViewController class],
                  [CellHeighTableViewController class],
@@ -37,11 +38,14 @@
                  [AttributeTextVC class],
                  [MsgViewController class],
                  [MasonryViewController class],
-                 [TabBarViewController class]
+                 [TabBarViewController class],
+                 [MoreViewController class]
                  ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+     
 }
 
 - (void)didReceiveMemoryWarning {

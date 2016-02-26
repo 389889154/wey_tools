@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import "UIColor+Util.h"
+#import "GuidePageVIew.h"
 @interface AppDelegate ()
 
 @end
@@ -26,9 +27,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    
+//    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
     UINavigationController *nvc = [[UINavigationController alloc]initWithRootViewController:[[RootViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = nvc;
+    [self.window makeKeyAndVisible];
     
     self.isNightModel = [[NSUserDefaults standardUserDefaults] boolForKey:@"isNightMode"];
     NSLog(@"%d",self.isNightModel);
@@ -47,7 +52,32 @@
     [[UINavigationBar appearance] setBarTintColor:[UIColor navigationbarColor]];
     [[UITabBar appearance] setBarTintColor:[UIColor titleBarColor]];
     
+    
+    // 引导页
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"start"]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"start"];
+        [self setGuidePage];
+    }
+
+    
+
     return YES;
+}
+
+- (void)setGuidePage {
+
+    NSArray *imgArr = @[@"0.jpg",@"1.jpg",@"2.jpg",@"3.jpg",@"4.jpg"];
+    GuidePageVIew *startView = [[GuidePageVIew alloc]init];
+    startView.imageDatas = imgArr;
+    __weak typeof(GuidePageVIew) *weakStartView = startView;
+    startView.buttonAction = ^{
+        [UIView animateWithDuration:2.f animations:^{
+            weakStartView.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [weakStartView removeFromSuperview];
+        }];
+    };
+    [self.window addSubview:startView];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
