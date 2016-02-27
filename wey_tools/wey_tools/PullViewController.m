@@ -28,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     _currentData1Index = 1;
     _currentData1SelectedIndex = 1;
     
@@ -39,13 +40,14 @@
     _data3 = [NSMutableArray arrayWithObjects:@"不限人数", @"单人餐", @"双人餐", @"3~4人餐", nil];
     
     menu = [[JSDropDownMenu alloc] initWithOrigin:CGPointMake(0, 64) andHeight:45];
-    menu.indicatorColor = [UIColor colorWithRed:175.0f/255.0f green:175.0f/255.0f blue:175.0f/255.0f alpha:1.0];
-    menu.separatorColor = [UIColor colorWithRed:210.0f/255.0f green:210.0f/255.0f blue:210.0f/255.0f alpha:1.0];
-    menu.textColor = [UIColor colorWithRed:83.f/255.0f green:83.f/255.0f blue:83.f/255.0f alpha:1.0f];
+    menu.indicatorColor = [UIColor blueColor];
+    menu.separatorColor = [UIColor blackColor];
+    menu.textColor = [UIColor darkGrayColor];
     menu.dataSource = self;
     menu.delegate = self;
-    
+
     [self.view addSubview:menu];
+   
 }
 
 
@@ -177,7 +179,7 @@
         _currentData3Index = indexPath.row;
     }
     
-    NSLog(@"%ld,%ld,%ld",_currentData1Index,_currentData2Index,_currentData3Index);
+    
 }
 
 
