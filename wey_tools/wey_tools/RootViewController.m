@@ -18,6 +18,7 @@
 #import "MsgViewController.h"
 #import "TabBarViewController.h"
 #import "MoreViewController.h"
+#import "PullViewController.h"
 @interface RootViewController ()
 @property (nonatomic, strong) NSArray *items;
 @property (nonatomic, strong) NSArray *classes;
@@ -28,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"MyTools";
-    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5",@"HUD",@"FMDBDemo",@"富文本",@"电话/跳网页/短信/相机等",@"Masonry",@"nav,tab,个人",@"tableView 展开"];
+    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5",@"HUD",@"FMDBDemo",@"富文本",@"电话/跳网页/短信/相机等",@"Masonry",@"nav,tab,个人",@"tableView 展开",@"类似美团下拉"];
     _classes = @[[CycleViewController class],
                  [ViewController class],
                  [CellHeighTableViewController class],
@@ -39,7 +40,8 @@
                  [MsgViewController class],
                  [MasonryViewController class],
                  [TabBarViewController class],
-                 [MoreViewController class]
+                 [MoreViewController class],
+                 [PullViewController class]
                  ];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 

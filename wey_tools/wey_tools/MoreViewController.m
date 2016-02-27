@@ -8,7 +8,7 @@
 //
 
 #import "MoreViewController.h"
-#import "OneTableViewController.h
+#import "OneTableViewController.h"
 #import "TwoTableViewController.h"
 @interface MoreViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -57,11 +57,10 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    if (indexPath.row == 1) {
-        self show// 折叠伸缩
-        
+    if (indexPath.row == 0) {
+        [self showViewController:[[OneTableViewController alloc]init] sender:nil];
     }else {
-        
+        [self showViewController:[[TwoTableViewController alloc]init] sender:nil];
     }
 }
 

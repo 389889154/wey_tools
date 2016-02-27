@@ -5,23 +5,42 @@
 //  Created by wey on 16/2/26.
 //  Copyright © 2016年 wey. All rights reserved.
 //
-
+#import "TableViewCellOne.h"
 #import "OneTableViewController.h"
-
+#define kCell_Height 44
 @interface OneTableViewController ()
-
+@property (nonatomic, strong) NSMutableArray *stateArray;
+@property (nonatomic, strong) NSMutableArray *sectionArray;
+@property (nonatomic, strong) NSMutableArray *dataSource;
 @end
 
 @implementation OneTableViewController
 
+- (void)initDataSource {
+    
+    self.sectionArray = @[@"itemA",@"itemB",@"itemC",@"itemD"].mutableCopy;
+    NSArray *one = @[@"one"];
+    NSArray *two = @[@"two",@"two"];
+    NSArray *three = @[@"three",@"three",@"three"];
+    NSArray *four = @[@"four",@"four",@"four",@"four"];
+    
+    self.dataSource = @[one,two,three,four].mutableCopy;
+    self.stateArray = [NSMutableArray array];
+    
+    for (int i = 0; i<self.dataSource.count; i++) {
+        // 所有分区闭合
+        [self.stateArray addObject:@"0"];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+   
+    self.title = @"折叠的tableView";
+    [self initDataSource];
+    self.tableView.rowHeight = kCell_Height;
+//    [self.tableView registerClass:[TableViewCellOne class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TableViewCellOne" bundle:nil] forCellReuseIdentifier:@"cell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,67 +51,102 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return self.dataSource.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    if ([self.stateArray[section] isEqualToString:@"1"]) {
+        // 如果是展开状态
+        NSArray *array = [self.dataSource objectAtIndex:section];
+        return array.count;
+    } else {
+        // 闭合状态
+        return 0;
+    }
+    
+
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+
+    TableViewCellOne *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.listLabel.text = self.dataSource[indexPath.section][indexPath.row];
+    cell.listLabel.textAlignment = NSTextAlignmentLeft;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.backgroundColor = [UIColor darkGrayColor];
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+// headerView
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//
+//    return self.sectionArray[section];
+//}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+    [button setTag:section+1];
+    button.backgroundColor = [UIColor whiteColor];
+    [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [button setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 60)];
+    [button addTarget:self action:@selector(touchBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIImageView *line = [[UIImageView alloc]initWithFrame:CGRectMake(0, button.frame.size.height-1, button.frame.size.width, 1)];
+    [line setImage:[UIImage imageNamed:@"line_real"]];
+    [button addSubview:line];
+    
+    UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(10, (kCell_Height-22)/2, 22, 22)];
+    [imgView setImage:[UIImage imageNamed:@"ico_faq_d"]];
+    [button addSubview:imgView];
+    
+    UIImageView *_imgView = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width-30, (kCell_Height-6)/2, 10, 6)];
+    
+    if ([self.stateArray[section] isEqualToString:@"0"]) {
+        _imgView.image = [UIImage imageNamed:@"ico_listdown"];
+    }else if ([self.stateArray[section] isEqualToString:@"1"]) {
+        _imgView.image = [UIImage imageNamed:@"ico_listup"];
+    }
+    [button addSubview:_imgView];
+    
+    UILabel *tlabel = [[UILabel alloc]initWithFrame:CGRectMake(45, (kCell_Height-20)/2, 200, 20)];
+//    [tlabel setBackgroundColor:[UIColor clearColor]];
+    [tlabel setFont:[UIFont systemFontOfSize:14]];
+    [tlabel setText:self.sectionArray[section]];
+    [button addSubview:tlabel];
+    return button;
+
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+// selection Cell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    NSLog(@"%ld,%ld",indexPath.section,indexPath.row);
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+
+- (void)touchBtnAction:(UIButton *)sender {
+
+    //TODO: 优化
+    if ([self.stateArray[sender.tag - 1] isEqualToString:@"1"]) {
+        [self.stateArray replaceObjectAtIndex:sender.tag - 1 withObject:@"0"];
+    }else {
+        [self.stateArray replaceObjectAtIndex:sender.tag - 1 withObject:@"1"];
+    }
+    
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:sender.tag - 1] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+
+    return kCell_Height;
 }
-*/
 
-/*
-#pragma mark - Navigation
+- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return 0.00001;
 }
-*/
-
 @end
