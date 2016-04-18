@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"MyTools";
-    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5",@"HUD",@"FMDBDemo",@"富文本",@"电话/跳网页/短信/相机等",@"Masonry",@"nav,tab,个人",@"tableView 展开",@"类似美团下拉"];
+    _items = @[@"loopIMG",@"runtime",@"缓存高度",@"MD5",@"HUD",@"FMDBDemo",@"富文本",@"电话/跳网页/短信/相机等",@"Masonry",@"nav,tab,个人",@"tableView 展开",@"类似美团下拉",@"TCL的照片选择"];
     _classes = @[[CycleViewController class],
                  [ViewController class],
                  [CellHeighTableViewController class],

@@ -420,6 +420,7 @@
 		F662193F1C43BE8100009FE9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F67F2D8B1CA7EF6A00391BC9 /* TclIMgPicker */,
 				F6BD4BF51C81D38C004F151D /* PullList */,
 				F6F9AA931C806E8300BCBB58 /* MoreTableView */,
 				F6F9AA8C1C8054F600BCBB58 /* GuidePages */,
@@ -489,6 +490,7 @@
 		F66219651C43F6DC00009FE9 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				F6F390581CABAF06002561E7 /* BaiduMap */,
 				F665B6DA1C5372ED008E48DF /* Masonry */,
 				F6C9CE7E1C4A2E7A00108B13 /* FMDB */,
 				F6B52DAE1C44959F00C5AF0D /* hud */,
@@ -675,6 +677,13 @@
 			name = resource;
 			sourceTree = "<group>";
 		};
+		F67F2D8B1CA7EF6A00391BC9 /* TclIMgPicker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TclIMgPicker;
+			sourceTree = "<group>";
+		};
 		F68180E51C472E7F005BAC1B /* CycleView */ = {
 			isa = PBXGroup;
 			children = (
@@ -821,6 +830,13 @@
 				F6C9CE8B1C4A2E7A00108B13 /* FMResultSet.m */,
 			);
 			path = fmdb;
+			sourceTree = "<group>";
+		};
+		F6F390581CABAF06002561E7 /* BaiduMap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BaiduMap;
 			sourceTree = "<group>";
 		};
 		F6F9AA8C1C8054F600BCBB58 /* GuidePages */ = {
